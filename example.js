@@ -9,26 +9,18 @@ function setup(){
         points[i] = new Point;
         
     }
-
-
-    input = [12,12];
-    guess = neron.guess(input);
-    console.log(guess);
-    
 }
 function draw(){
     drawRect(200,50,200,200,"#fff");
     drawLine(200,50,400,250,"#000");
 
-    for (var i=0;i<points.length;i++){
-        points[i].show();
-    }
+    
     
     for (var i=0;i<points.length;i++){
         var target = points[i].label;
-        var inputs = [points[i].x,points[i].y];
+        var inputs = [points[i].x,points[i].y]; 
         
-        guess = neron.guess(input);
+        guess = neron.guess(inputs);
         
         if(guess == 1){
             ctx.fillStyle = "#0f0";
@@ -36,12 +28,13 @@ function draw(){
             ctx.fillStyle = "#f00"; 
         }
         drawCircle(points[i].x+200,points[i].y+50,4);
-
-        neron.train(inputs,target);
+        neron.train(inputs,target); 
     }
 }
+
+
 setup();
 
-//draw();
+draw();
 //console.log("test");
 

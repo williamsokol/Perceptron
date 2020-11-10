@@ -10,6 +10,7 @@ class Perceptron {
         for(var i =0;i<this.weights.length;i++)
         {
             this.weights[i] = getRndInteger(-1,1);
+            
         }    
     }
 
@@ -20,9 +21,7 @@ class Perceptron {
             sum += inputs[i] * this.weights[i];            
         }
         
-        
         var output = sign(sum);
-        
         return output;
     }
 
@@ -30,9 +29,10 @@ class Perceptron {
     {
         var guess = this.guess(inputs);
         var error = target - guess;
-        //console.log(error);
+        
         for(var i=0;i<this.weights.length;i++)
         {
+            
             this.weights[i] += error * inputs[i] * this.lr;            
         }
     }

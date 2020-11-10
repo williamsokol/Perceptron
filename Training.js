@@ -15,9 +15,5 @@ class Point
         } 
         
     }
-    show()
-    {
-        
-        
-    }
+   
 }
