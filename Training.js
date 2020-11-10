@@ -1,9 +1,11 @@
+const mapsize = 250;
+
 class Point
 { 
     constructor()
     {
-        this.x = getRndInteger(0,200);
-        this.y =  getRndInteger(0,200);
+        this.x = getRndInteger(0,mapsize);
+        this.y =  getRndInteger(0,mapsize);
         
         
 

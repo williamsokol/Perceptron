@@ -5,7 +5,7 @@ class Perceptron {
     constructor(){
         this.weights = new Array(2);
         this.lr = 0.1;
-
+        
         
         for(var i =0;i<this.weights.length;i++)
         {

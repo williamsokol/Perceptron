@@ -1,5 +1,9 @@
 var points = new Array(50);
 
+
+const offsetY = canvas.height/2-mapsize/2;
+const offsetX = canvas.width/2-mapsize/2;
+console.log(canvas.height);
 function setup(){
     
 
@@ -11,8 +15,8 @@ function setup(){
     }
 }
 function draw(){
-    drawRect(200,50,200,200,"#fff");
-    drawLine(200,50,400,250,"#000");
+    drawRect(offsetX,offsetY,mapsize,mapsize,"#fff");
+    drawLine(offsetX,offsetY,mapsize+offsetX,mapsize+offsetY,"#000");
 
     
     
@@ -27,14 +31,13 @@ function draw(){
         }else{
             ctx.fillStyle = "#f00"; 
         }
-        drawCircle(points[i].x+200,points[i].y+50,4);
+        drawCircle(points[i].x+offsetX,points[i].y+offsetY,4);
         neron.train(inputs,target); 
     }
 }
 
 
 setup();
-
 draw();
 //console.log("test");
 
