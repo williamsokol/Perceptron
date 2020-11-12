@@ -27,7 +27,7 @@ function draw(){
     drawRect(offsetX,offsetY,mapsize,mapsize,"#fff");
     drawLine(lineP1.px,lineP1.py,lineP2.px,lineP2.py,"#000");
     
-    drawLine(lineP3.px,lineP3.py, lineP4.px,lineP4.py,"#000");
+    drawLine(lineP3.px,lineP3.py, lineP4.px,lineP4.py,"#222");
 
     
     
@@ -49,7 +49,7 @@ function draw(){
             ctx.fillStyle = "#f00"; 
         }
         
-        drawCircle(points[i].px,points[i].py,4);
+        drawCircle(points[i].px,points[i].py,4,"#000");
         trainingIndex++;
     }
     
@@ -67,7 +67,7 @@ function thing(){
         
         draw();
         window.requestAnimationFrame(thing);
-    },1000/30)
+    },1000/20)
     
     
 }

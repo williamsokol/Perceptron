@@ -2,9 +2,12 @@ const mapsize = 250;
 const offsetY = canvas.height/2-mapsize/2;  //top of board
 const offsetX = canvas.width/2-mapsize/2;   //left of board
 
+const slope = getRndInteger(-5,5);
+const height = getRndInteger(-20,20);
+
 function f(x)
 {
-    return 2*x-10;
+    return slope*x-height;
 }
 
 class Point

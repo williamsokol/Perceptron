@@ -18,7 +18,7 @@ function drawCircle(x,y,r,c,fill=true){
     ctx.arc(x,y,r,0,2*Math.PI);
     if(fill = true){
         ctx.fill();
-        //ctx.fillStyle = c;
+        ctx.strokeStyle = c;
     }
     ctx.stroke();
 
